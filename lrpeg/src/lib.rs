@@ -681,7 +681,7 @@ impl Generator {
             r#"
 #![allow(unused_imports, dead_code, clippy::all)]
 use std::collections::HashMap;
-use regex::Regex;
+use onig::Regex;
 use unicode_xid::UnicodeXID;
 
 #[derive(Clone, Debug)]
@@ -947,7 +947,7 @@ impl PEG {
                         r#"
                 Terminal::{} => {{
                     self.regex_{}.find(&input[pos..]).map(|m| {{
-                        m.end() + pos
+                        m.1 + pos
                     }})
                 }}"#,
                         name, name
