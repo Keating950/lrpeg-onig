@@ -1,7 +1,7 @@
 mod peg {
 #![allow(unused_imports, dead_code, clippy::all)]
 use std::collections::HashMap;
-use regex::Regex;
+use onig::Regex;
 use unicode_xid::UnicodeXID;
 
 #[derive(Clone, Debug)]
@@ -1385,22 +1385,22 @@ impl PEG {
                 }
                 Terminal::Regex => {
                     self.regex_Regex.find(&input[pos..]).map(|m| {
-                        m.end() + pos
+                        m.1 + pos
                     })
                 }
                 Terminal::Regex_0 => {
                     self.regex_Regex_0.find(&input[pos..]).map(|m| {
-                        m.end() + pos
+                        m.1 + pos
                     })
                 }
                 Terminal::Regex_1 => {
                     self.regex_Regex_1.find(&input[pos..]).map(|m| {
-                        m.end() + pos
+                        m.1 + pos
                     })
                 }
                 Terminal::re => {
                     self.regex_re.find(&input[pos..]).map(|m| {
-                        m.end() + pos
+                        m.1 + pos
                     })
                 }
             }

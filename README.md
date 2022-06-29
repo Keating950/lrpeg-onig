@@ -1,3 +1,8 @@
+This is a fork of [lrpeg](https://crates.io/crates/lrpeg) that uses
+[onig](https://crates.io/crates/onig) for its regex implementation to enable
+lookbehind and lookahead.
+
+---
 
 [![crates.io](https://img.shields.io/crates/v/lrpeg.svg)](https://crates.io/crates/lrpeg)
 [![CI](https://github.com/seanyoung/lrpeg/workflows/test/badge.svg)](https://github.com/seanyoung/lrpeg/actions)

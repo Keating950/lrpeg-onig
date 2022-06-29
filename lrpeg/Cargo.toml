@@ -12,5 +12,5 @@ license = "MIT"
 workspace = ".."
 
 [dependencies]
+onig = "6.3.1"
 unicode-xid = "0.2"
-regex = "1"
